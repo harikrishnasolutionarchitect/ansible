@@ -7,6 +7,10 @@
       user:
         name: harikrishnapalakila
         state: present
+    - name: DevSecOps User Adding
+      user: 
+        name: satti 
+        state: present
     - name: group creation -
       group:
         name: devsecops
