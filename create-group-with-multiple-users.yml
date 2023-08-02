@@ -3,11 +3,11 @@
   hosts: localhost
   become: true
   tasks:
-    - name: user creation
+    - name: user creation - 
       user:
         name: harikrishnapalakila
         state: present
-    - name: group creation
+    - name: group creation -
       group:
         name: devsecops
         state: present
