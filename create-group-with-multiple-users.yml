@@ -1,0 +1,28 @@
+---
+- name: Create multiple users and groups
+  hosts: localhost
+  become: true
+  tasks:
+    - name: user creation
+      user:
+        name: harikrishnapalakila
+        state: present
+    - name: group creation
+      group:
+        name: devsecops
+        state: present
+    - name: create group
+      group:
+        name: "{{ item }}"
+        state: present
+      loop: 
+        - "dev"
+        - "fmcna"
+    - name: create users and groups
+      user:
+        name: "{{ item.name}}"
+        state: present 
+        groups: "{{ item.groups }}"
+      loop:
+        - { name: 'devops03', groups: fmcna }
+        - { name: 'devops04', groups: fmcna }
