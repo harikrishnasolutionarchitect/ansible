@@ -30,3 +30,4 @@
       loop:
         - { name: 'devops03', groups: fmcna }
         - { name: 'devops04', groups: fmcna }
+        - { name: 'satti', groups: devsecops }
