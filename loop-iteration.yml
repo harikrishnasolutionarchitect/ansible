@@ -3,7 +3,7 @@
   hosts: localhost
   gather_facts: false
   tasks:
-    - name: Echo the values
+    - name: Echo the value
       command: echo " {{ item }}"
       loop:
         - 1
@@ -12,3 +12,4 @@
         - 4
         - 5
         - 6
+        
