@@ -1,0 +1,14 @@
+---
+- name: Woking with loops in Ansible
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Echo the values
+      command: echo " {{ item }}"
+      loop:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
